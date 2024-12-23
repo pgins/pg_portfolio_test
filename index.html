@@ -1,1 +1,162 @@
-<h1>Hello there!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Stack Developer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #0066ff, #00cc99);
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    header nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    section.hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .circle {
+      fill: none;
+      stroke-width: 4;
+      stroke: #ffffff;
+      opacity: 0.2;
+      animation: circle-move 8s infinite ease-in-out;
+    }
+
+    @keyframes circle-move {
+      0% {
+        transform: translate(0, 0) scale(0.5);
+      }
+      50% {
+        transform: translate(50px, -50px) scale(1.5);
+      }
+      100% {
+        transform: translate(0, 0) scale(0.5);
+      }
+    }
+
+    section.projects {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .projects h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .projects .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #262626;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #121212;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>John Doe</h1>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <h2>Hi, I'm John Doe</h2>
+  <p>I'm a passionate Full-Stack Developer specializing in creating dynamic and responsive web applications.</p>
+  <svg class="animation">
+    <circle class="circle" cx="50%" cy="50%" r="150"></circle>
+    <circle class="circle" cx="30%" cy="40%" r="100"></circle>
+    <circle class="circle" cx="70%" cy="60%" r="120"></circle>
+  </svg>
+</section>
+
+<section class="projects" id="projects">
+  <h3>My Projects</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Project One</h4>
+      <p>A full-stack web application for task management.</p>
+    </div>
+    <div class="card">
+      <h4>Project Two</h4>
+      <p>A responsive portfolio website built with modern frameworks.</p>
+    </div>
+    <div class="card">
+      <h4>Project Three</h4>
+      <p>An e-commerce platform with a scalable backend.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>© 2024 John Doe. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
